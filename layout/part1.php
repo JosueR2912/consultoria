@@ -182,13 +182,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="<?php echo $URL;?>/almacen" class="nav-link">
+                                <a href="<?php echo $URL;?>/documentos_vehiculos/index.php" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Listado de documentos</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="<?php echo $URL;?>/almacen/create.php" class="nav-link">
+                                <a href="<?php echo $URL;?>/documentos_vehiculos/create.php" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Registro de documentos</p>
                                 </a>

@@ -3,8 +3,8 @@ include ('../app/config.php');
 include ('../layout/sesion.php');
 
 include ('../layout/part1.php');
-
 include ('../app/controllers/oficios/update_oficio.php');
+
 
 ?>
 
@@ -44,23 +44,19 @@ include ('../app/controllers/oficios/update_oficio.php');
                             <div class="row">
                                 <div class="col-md-12">
 
-                                    <form action="../app/controllers/oficios/update_oficio.php" method="post">
+                                    <form action="../app/controllers/oficios/update.php" method="post">
                                         <input type="text" name="id_oficio" value="<?php echo $id_oficio_get; ?>" hidden>
                                        <div class="form-group">
                                             <label for="">Nombre del oficio</label>
-                                            <input type="text" name="nombre_oficio" class="form-control" placeholder="Escriba aquí el nombre del oficio..." required>
+                                            <input type="text" name="nombre_oficio" value="<?php echo $nombre_oficio;?>"  class="form-control" placeholder="Escriba aquí el nombre del oficio..." required>
                                         </div>
                                         <div class="form-group">
                                             <label for="">Nº oficio</label>
-                                            <input type="text" name="n_oficio" class="form-control" placeholder="Escriba aquí el nº de oficio..." required>
+                                            <input type="text" name="n_oficio" class="form-control" value="<?php echo $n_oficio;?>" placeholder="Escriba aquí el nº de oficio..." required>
                                         </div>
                                         <div class="form-group">
                                             <label for="">Fecha del oficio</label>
-                                            <input type="date" name="fecha_oficio" class="form-control" placeholder="Escriba aquí la fecha del oficio..." required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="">Inserte el documento del oficio</label>
-                                            <input type="file" name="doc_oficio" class="form-control" placeholder="Escriba aquí el documento..." required>
+                                            <input type="date" name="fecha_oficio" class="form-control" value="<?php echo $fecha_oficio;?>" placeholder="Escriba aquí la fecha del oficio..." required>
                                         </div>
                                         <hr>
                                         <div class="form-group">

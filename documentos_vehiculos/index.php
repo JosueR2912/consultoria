@@ -4,7 +4,7 @@ include ('../layout/sesion.php');
 
 include ('../layout/part1.php');
 
-include ('../app/controllers/providencias/list_providencia.php');
+include ('../app/controllers/doc_vehiculos/list_doc_vehiculos.php');
 
 ?>
 
@@ -15,7 +15,7 @@ include ('../app/controllers/providencias/list_providencia.php');
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-12">
-                    <h1 class="m-0">Listado de Providencias</h1>
+                    <h1 class="m-0">Listado de Documentos de Vehículos</h1>
                 </div><!-- /.col -->
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
@@ -31,7 +31,7 @@ include ('../app/controllers/providencias/list_providencia.php');
                 <div class="col-md-12">
                     <div class="card card-outline card-primary">
                         <div class="card-header">
-                            <h3 class="card-title">Providencias registradas</h3>
+                            <h3 class="card-title">Documentos de Vehículos registrados</h3>
                             <div class="card-tools">
                                 <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
                                 </button>
@@ -44,38 +44,28 @@ include ('../app/controllers/providencias/list_providencia.php');
                                 <thead>
                                 <tr>
                                     <th><center>Nro</center></th>
-                                    <th><center>C.I Servidor</center></th>
-                                    <th><center>Servidor</center></th>
-                                    <th><center>Cargo</center></th>
-                                    <th><center>Fecha de Designacion</center></th>
-                                    <th><center>Nº providencia</center></th>
-                                    <th><center>Fecha de publicacion</center></th>
-                                    <th><center>Nº gaceta</center></th>
-                                    <th><center>Relacion Acta Entrega</center></th>
+                                    <th><center>Modelo</center></th>
+                                    <th><center>Marca</center></th>
                                     <th><center>Acciones</center></th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <?php
                                 $contador = 0;
-                                foreach ($providencia_datos as $providencia_dato){
-                                    $id_providencia = $providencia_dato['id_providencia']; ?>
+                                foreach ($vehiculo_datos as $vehiculo_dato){
+                                    $id_vehiculo = $vehiculo_dato['id_documento']; ?>
                                     <tr>
                                         <td><center><?php echo $contador = $contador + 1;?></center></td>
-                                        <td><?php echo $providencia_dato['cedula_servidor'];?></td>
-                                        <td><?php echo $providencia_dato['nombre_servidor'];?></td>
-                                        <td><center><?php echo $providencia_dato['cargo_servidor'];?></center></td>
-                                        <td><?php echo $providencia_dato['fecha_designacion'];?></td>
-                                        <td><?php echo $providencia_dato['n_providencia'];?></td>
-                                        <td><?php echo $providencia_dato['fecha_public'];?></td>
-                                        <td><?php echo $providencia_dato['n_gaceta'];?></td>
-                                        <td><?php echo $providencia_dato['relacion_acta_entrega'];?></td>
+                                        <td><?php echo $vehiculo_dato['modelo_vehiculo'];?></td>
+                                        <td><?php echo $vehiculo_dato['marca_vehiculo'];?></td>
+                                        <td><?php echo $vehiculo_dato['doc_vehiculo'];?></td>
+
                                         <td>
                                             <center>
                                                 <div class="btn-group">
-                                                    <a href="show.php?id=<?php echo $id_providencia; ?>" type="button" class="btn btn-info"><i class="fa fa-eye"></i> Ver</a>
-                                                    <a href="update.php?id=<?php echo $id_providencia; ?>" type="button" class="btn btn-success"><i class="fa fa-pencil-alt"></i> Editar</a>
-                                                    <a href="delete_providencia.php?id=<?php echo $id_providencia; ?>" type="button" class="btn btn-danger"><i class="fa fa-trash"></i> Borrar</a>
+                                                    <a href="show.php?id=<?php echo $id_vehiculo; ?>" type="button" class="btn btn-info"><i class="fa fa-eye"></i> Ver</a>
+                                                    <a href="update.php?id=<?php echo $id_vehiculo; ?>" type="button" class="btn btn-success"><i class="fa fa-pencil-alt"></i> Editar</a>
+                                                    <a href="delete_vehiculo.php?id=<?php echo $id_vehiculo; ?>" type="button" class="btn btn-danger"><i class="fa fa-trash"></i> Borrar</a>
                                                 </div>
                                             </center>
                                         </td>
@@ -87,14 +77,8 @@ include ('../app/controllers/providencias/list_providencia.php');
                                 <tfoot>
                                 <tr>
                                    <th><center>Nro</center></th>
-                                    <th><center>C.I Servidor</center></th>
-                                    <th><center>Servidor</center></th>
-                                    <th><center>Cargo</center></th>
-                                    <th><center>Fecha de Designacion</center></th>
-                                    <th><center>Nº providencia</center></th>
-                                    <th><center>Fecha de publicacion</center></th>
-                                    <th><center>Nº gaceta</center></th>
-                                    <th><center>Relacion Acta Entrega</center></th>
+                                    <th><center>Modelo</center></th>
+                                     <th><center>Marca</center></th>
                                     <th><center>Acciones</center></th>
                                 </tr>
                                 </tfoot>
@@ -123,12 +107,12 @@ include ('../app/controllers/providencias/list_providencia.php');
             "pageLength": 5,
             "language": {
                 "emptyTable": "No hay información",
-                "info": "Mostrando _START_ a _END_ de _TOTAL_ Providencias",
-                "infoEmpty": "Mostrando 0 a 0 de 0 Providencias",
-                "infoFiltered": "(Filtrado de _MAX_ total Providencias)",
+                "info": "Mostrando _START_ a _END_ de _TOTAL_ DOCUMENTOS_DE_VEHICULOS",
+                "infoEmpty": "Mostrando 0 a 0 de 0 DOCUMENTOS_DE_VEHICULOS",
+                "infoFiltered": "(Filtrado de _MAX_ total DOCUMENTOS_DE_VEHICULOS)",
                 "infoPostFix": "",
                 "thousands": ",",
-                "lengthMenu": "Mostrar _MENU_ Providencias",
+                "lengthMenu": "Mostrar _MENU_ DOCUMENTOS_DE_VEHICULOS",
                 "loadingRecords": "Cargando...",
                 "processing": "Procesando...",
                 "search": "Buscador:",

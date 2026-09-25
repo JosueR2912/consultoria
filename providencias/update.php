@@ -48,35 +48,35 @@ include ('../app/controllers/providencias/update_providencia.php');
                                         <input type="text" name="id_providencia" value="<?php echo $id_providencia_get; ?>" hidden>
                                        <div class="form-group">
                                             <label for="">Cedula del servidor</label>
-                                            <input type="text" name="cedula_servidor" class="form-control" placeholder="Escriba aquí la cédula del servidor..." required>
+                                            <input type="text" name="cedula_servidor" value="<?php echo $cedula; ?>" class="form-control" placeholder="Escriba aquí la cédula del servidor..." required>
                                         </div>
                                         <div class="form-group">
                                             <label for="">Nombre del servidor</label>
-                                            <input type="text" name="nombre_servidor" class="form-control" placeholder="Escriba aquí el nombre del servidor..." required>
+                                            <input type="text" name="nombre_servidor" class="form-control" value="<?php echo $nombre; ?>" placeholder="Escriba aquí el nombre del servidor..." required>
                                         </div>
                                         <div class="form-group">
                                             <label for="">Cargo del servidor</label>
-                                            <input type="text" name="cargo_servidor" class="form-control" placeholder="Escriba aquí el cargo del servidor..." required>
+                                            <input type="text" name="cargo_servidor" class="form-control" value="<?php echo $cargo; ?>" placeholder="Escriba aquí el cargo del servidor..." required>
                                         </div>
                                         <div class="form-group">
                                             <label for="">Fecha de designación</label>
-                                            <input type="date" name="fecha_designacion" class="form-control" placeholder="Escriba aquí la fecha de designación..." required>
+                                            <input type="date" name="fecha_designacion" class="form-control" value="<?php echo $fecha_designacion; ?>" placeholder="Escriba aquí la fecha de designación..." required>
                                         </div>
                                          <div class="form-group">
                                             <label for="">Nº de provincia</label>
-                                            <input type="text" name="n_providencia" class="form-control" placeholder="Escriba aquí el nº de provincia..." required>
+                                            <input type="text" name="n_providencia" class="form-control" value="<?php echo $n_providencia; ?>" placeholder="Escriba aquí el nº de provincia..." required>
                                         </div>
                                         <div class="form-group">
                                             <label for="">Fecha de publicacion en gaceta</label>
-                                            <input type="date" name="fecha_public" class="form-control" placeholder="Escriba aquí la fecha de designación..." required>
+                                            <input type="date" name="fecha_public" class="form-control"  value="<?php echo $fecha_public; ?>" placeholder="Escriba aquí la fecha de designación..." required>
                                         </div>
                                          <div class="form-group">
                                             <label for="">Nº de gaceta</label>
-                                            <input type="text" name="n_gaceta" class="form-control" placeholder="Escriba aquí el nº de gaceta..." required>
+                                            <input type="text" name="n_gaceta" class="form-control" value="<?php echo $n_gaceta; ?>" placeholder="Escriba aquí el nº de gaceta..." required>
                                         </div>
                                          <div class="form-group">
                                             <label for="">Relación de acta de entrega</label>
-                                            <input type="text" name="relacion_acta_entrega" class="form-control" placeholder="Escriba aquí la relación de acta de entrega..." required>
+                                            <input type="text" name="relacion_acta_entrega" value="<?php echo $relacion_acta_entrega;?>" class="form-control" placeholder="Escriba aquí la relación de acta de entrega..." required>
                                         </div>
 
                                       
