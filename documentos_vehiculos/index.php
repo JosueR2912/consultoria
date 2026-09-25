@@ -46,6 +46,7 @@ include ('../app/controllers/doc_vehiculos/list_doc_vehiculos.php');
                                     <th><center>Nro</center></th>
                                     <th><center>Modelo</center></th>
                                     <th><center>Marca</center></th>
+                                    <th><center>Fecha de Registro</center></th>
                                     <th><center>Acciones</center></th>
                                 </tr>
                                 </thead>
@@ -58,7 +59,8 @@ include ('../app/controllers/doc_vehiculos/list_doc_vehiculos.php');
                                         <td><center><?php echo $contador = $contador + 1;?></center></td>
                                         <td><?php echo $vehiculo_dato['modelo_vehiculo'];?></td>
                                         <td><?php echo $vehiculo_dato['marca_vehiculo'];?></td>
-                                        <td><?php echo $vehiculo_dato['doc_vehiculo'];?></td>
+                                        <td><?php echo $vehiculo_dato['fecha_registro'];?></td>
+                                       
 
                                         <td>
                                             <center>
@@ -79,6 +81,7 @@ include ('../app/controllers/doc_vehiculos/list_doc_vehiculos.php');
                                    <th><center>Nro</center></th>
                                     <th><center>Modelo</center></th>
                                      <th><center>Marca</center></th>
+                                     <th><center>Fecha de Registro</center></th>
                                     <th><center>Acciones</center></th>
                                 </tr>
                                 </tfoot>
