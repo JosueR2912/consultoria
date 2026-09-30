@@ -18,7 +18,7 @@ if (isset($_FILES['doc_vehiculo']) && $_FILES['doc_vehiculo']['error'] == 0) {
     $nuevo_nombre = "doc_" . date('Ymd_His') . "_" . rand(100, 999) . "." . $ext;
     
     // Carpeta donde se guardará el archivo (asegúrate de que exista y tenga permisos de escritura)
-    $carpeta_destino = "../../../docoficios/";
+    $carpeta_destino = "../../../docvehiculos/";
     
     if (!file_exists($carpeta_destino)) {
         mkdir($carpeta_destino, 0777, true);

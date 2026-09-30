@@ -209,13 +209,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="<?php echo $URL;?>/compras" class="nav-link">
+                                <a href="<?php echo $URL;?>/convenios/index.php" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Listado de convenios</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="<?php echo $URL;?>/compras/create.php" class="nav-link">
+                                <a href="<?php echo $URL;?>/convenios/create.php" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Registro de convenios</p>
                                 </a>

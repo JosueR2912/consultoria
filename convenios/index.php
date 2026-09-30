@@ -4,7 +4,7 @@ include ('../layout/sesion.php');
 
 include ('../layout/part1.php');
 
-include ('../app/controllers/doc_vehiculos/list_doc_vehiculos.php');
+include ('../app/controllers/convenios/list_convenios.php');
 
 ?>
 
@@ -15,7 +15,7 @@ include ('../app/controllers/doc_vehiculos/list_doc_vehiculos.php');
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-12">
-                    <h1 class="m-0">Listado de Documentos de Vehículos</h1>
+                    <h1 class="m-0">Listado de Convenios</h1>
                 </div><!-- /.col -->
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
@@ -31,7 +31,7 @@ include ('../app/controllers/doc_vehiculos/list_doc_vehiculos.php');
                 <div class="col-md-12">
                     <div class="card card-outline card-primary">
                         <div class="card-header">
-                            <h3 class="card-title">Documentos de Vehículos registrados</h3>
+                            <h3 class="card-title">Convenios registrados</h3>
                             <div class="card-tools">
                                 <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
                                 </button>
@@ -44,30 +44,31 @@ include ('../app/controllers/doc_vehiculos/list_doc_vehiculos.php');
                                 <thead>
                                 <tr>
                                     <th><center>Nro</center></th>
-                                    <th><center>Modelo</center></th>
-                                    <th><center>Marca</center></th>
-                                    <th><center>Fecha de Registro</center></th>
+                                    <th><center>Nombre</center></th>
+                                    <th><center>Empresa</center></th>
+                                    <th><center>Fecha de convenio</center></th>
+                                    <th><center>Fecha de culminacion</center></th>
                                     <th><center>Acciones</center></th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <?php
                                 $contador = 0;
-                                foreach ($vehiculo_datos as $vehiculo_dato){
-                                    $id_vehiculo = $vehiculo_dato['id_documento']; ?>
+                                foreach ($convenio_datos as $convenio_dato){
+                                    $id_convenio = $convenio_dato['id_convenio']; ?>
                                     <tr>
                                         <td><center><?php echo $contador = $contador + 1;?></center></td>
-                                        <td><?php echo $vehiculo_dato['modelo_vehiculo'];?></td>
-                                        <td><?php echo $vehiculo_dato['marca_vehiculo'];?></td>
-                                        <td><?php echo $vehiculo_dato['fecha_registro'];?></td>
-                                       
+                                        <td><?php echo $convenio_dato['nombre_convenio'];?></td>
+                                        <td><?php echo $convenio_dato['empresa_convenio'];?></td>
+                                        <td><?php echo $convenio_dato['fecha_convenio'];?></td>
+                                        <td><?php echo $convenio_dato['fecha_culminacion'];?></td>
 
                                         <td>
                                             <center>
                                                 <div class="btn-group">
-                                                    <a href="show.php?id=<?php echo $id_vehiculo; ?>" type="button" class="btn btn-info"><i class="fa fa-eye"></i> Ver</a>
-                                                    <a href="update.php?id=<?php echo $id_vehiculo; ?>" type="button" class="btn btn-success"><i class="fa fa-pencil-alt"></i> Editar</a>
-                                                    <a href="delete_doc_vehiculos.php?id=<?php echo $id_vehiculo; ?>" type="button" class="btn btn-danger"><i class="fa fa-trash"></i> Borrar</a>
+                                                    <a href="show.php?id=<?php echo $id_convenio; ?>" type="button" class="btn btn-info"><i class="fa fa-eye"></i> Ver</a>
+                                                    <a href="update.php?id=<?php echo $id_convenio; ?>" type="button" class="btn btn-success"><i class="fa fa-pencil-alt"></i> Editar</a>
+                                                    <a href="delete_convenios.php?id=<?php echo $id_convenio; ?>" type="button" class="btn btn-danger"><i class="fa fa-trash"></i> Borrar</a>
                                                 </div>
                                             </center>
                                         </td>
@@ -79,9 +80,10 @@ include ('../app/controllers/doc_vehiculos/list_doc_vehiculos.php');
                                 <tfoot>
                                 <tr>
                                    <th><center>Nro</center></th>
-                                    <th><center>Modelo</center></th>
-                                     <th><center>Marca</center></th>
-                                     <th><center>Fecha de Registro</center></th>
+                                    <th><center>Nombre</center></th>
+                                     <th><center>Empresa</center></th>
+                                     <th><center>Fecha de Convenio</center></th>
+                                     <th><center>Fecha de Culminación</center></th>
                                     <th><center>Acciones</center></th>
                                 </tr>
                                 </tfoot>
@@ -110,12 +112,12 @@ include ('../app/controllers/doc_vehiculos/list_doc_vehiculos.php');
             "pageLength": 5,
             "language": {
                 "emptyTable": "No hay información",
-                "info": "Mostrando _START_ a _END_ de _TOTAL_ DOCUMENTOS DE VEHICULOS",
-                "infoEmpty": "Mostrando 0 a 0 de 0 DOCUMENTOS_DE_VEHICULOS",
-                "infoFiltered": "(Filtrado de _MAX_ total DOCUMENTOS DE VEHICULOS)",
+                "info": "Mostrando _START_ a _END_ de _TOTAL_ CONVENIOS",
+                "infoEmpty": "Mostrando 0 a 0 de 0 CONVENIOS",
+                "infoFiltered": "(Filtrado de _MAX_ total CONVENIOS)",
                 "infoPostFix": "",
                 "thousands": ",",
-                "lengthMenu": "Mostrar _MENU_ DOCUMENTOS DE VEHICULOS",
+                "lengthMenu": "Mostrar _MENU_ CONVENIOS",
                 "loadingRecords": "Cargando...",
                 "processing": "Procesando...",
                 "search": "Buscador:",
